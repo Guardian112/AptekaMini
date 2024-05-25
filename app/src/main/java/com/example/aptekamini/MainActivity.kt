@@ -6,10 +6,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
-//val goToMedic:Button = findViewById(R.id.goToMedic)
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
+import com.example.aptekamini.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,9 +23,45 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
-}
-    fun MedicOnClick(view: View) {}
-    fun PharmacyOnClick(view: View) {}
+    fun MedicOnClick(view: View) {
+        with(binding) {
+            appAvatar.isVisible = false
+            goToMedic.isVisible = false
+            goToPharmacy.isVisible = true
+            goToMainLeft.isVisible = true
+            goToMainRight.isVisible = false
+            infoScrollView.isVisible = true
+            medicLayout.isVisible = true
+            pharmacyLayout.isVisible = false
+        }
+    }
+    fun PharmacyOnClick(view: View) {
+        with(binding) {
+            appAvatar.isVisible = false
+            goToMedic.isVisible = true
+            goToPharmacy.isVisible = false
+            goToMainLeft.isVisible = false
+            goToMainRight.isVisible = true
+            infoScrollView.isVisible = true
+            medicLayout.isVisible = false
+            pharmacyLayout.isVisible = true
+        }
+    }
+    fun MainOnClick(view: View) {
+        with(binding) {
+            appAvatar.isVisible = true
+            goToMedic.isVisible = true
+            goToPharmacy.isVisible = true
+            goToMainLeft.isVisible = false
+            goToMainRight.isVisible = false
+            infoScrollView.isVisible = false
+            medicLayout.isVisible = false
+            pharmacyLayout.isVisible = false
+        }
+    }
 
 }
