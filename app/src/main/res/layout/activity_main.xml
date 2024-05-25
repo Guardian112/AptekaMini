@@ -31,11 +31,26 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="375dp"
-            android:layout_height="65dp"
-            android:layout_gravity="center|top"
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="70dp"
+            android:layout_height="69dp"
+            android:layout_gravity="center|end|top"
             android:layout_marginTop="35dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/button"
+            android:fontFamily="@font/nunito_regular"
+            android:onClick="SearchOnClick"
+            app:cornerRadius="22dp"
+            app:icon="@android:drawable/ic_menu_search"
+            app:iconSize="35sp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center|top"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
             android:background="@color/white"
             android:textColor="@color/black"
             android:textSize="20sp">
@@ -157,14 +172,14 @@
                 android:visibility="gone">
 
                 <LinearLayout
-                    android:id="@+id/medic"
+                    android:id="@+id/medic1"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:orientation="horizontal"
                     tools:ignore="UselessParent">
 
                     <TextView
-                        android:id="@+id/medicName"
+                        android:id="@+id/medicName1"
                         android:layout_width="240dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/infoback_fill"
@@ -176,7 +191,7 @@
                         tools:ignore="HardcodedText" />
 
                     <TextView
-                        android:id="@+id/medicDozirovka"
+                        android:id="@+id/medicDozirovka1"
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/infoback_fill"
@@ -188,7 +203,7 @@
                         tools:ignore="HardcodedText" />
 
                     <TextView
-                        android:id="@+id/medicPrise"
+                        android:id="@+id/medicPrise1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/imageback_fill"
@@ -239,6 +254,366 @@
                         android:background="@drawable/imageback_fill"
                         android:fontFamily="@font/nunito_regular"
                         android:text="от 250 руб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/medic3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/medicName3"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Инсулин"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicDozirovka3"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="20 тб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicPrise3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imageback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="от 150 руб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/medic4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/medicName4"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Аскорбиновая кислота"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicDozirovka4"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="30 тб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicPrise4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imageback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="от 50 руб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/medic5"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/medicName5"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Виброцил Капли"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicDozirovka5"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="1 пуз"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicPrise5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imageback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="от 200 руб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/medic6"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/medicName6"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Лекарство6"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicDozirovka6"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="20 тб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicPrise6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imageback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="от 100 руб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/medic7"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/medicName7"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Лекарство7"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicDozirovka7"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="20 тб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicPrise7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imageback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="от 100 руб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/medic8"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/medicName8"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Лекарство8"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicDozirovka8"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="20 тб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicPrise8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imageback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="от 100 руб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/medic9"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/medicName9"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Лекарство9"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicDozirovka9"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="20 тб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicPrise9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imageback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="от 100 руб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/medic10"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/medicName10"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Лекарство10"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicDozirovka10"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="20 тб"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/medicPrise10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/imageback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="от 100 руб"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="20sp"
@@ -350,6 +725,318 @@
                             android:background="@drawable/infoback_fill"
                             android:fontFamily="@font/nunito_regular"
                             android:text="8(920)398-08-71"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pharmac3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/pharmacyNameAndTime3"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Антей \n\n с 09:00 до 20:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:id="@+id/adressPhoneView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pharmacyAdress3"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="Кострома, ул. Сутырина, 16"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/pharmacyPhoneNumber3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="8(911)520-18-49"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pharmac4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/pharmacyNameAndTime4"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Антей \n\n с 09:00 до 20:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:id="@+id/adressPhoneView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pharmacyAdress4"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="Кострома, ул. Сутырина, 16"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/pharmacyPhoneNumber4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="8(911)520-18-49"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pharmac5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/pharmacyNameAndTime5"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Антей \n\n с 09:00 до 20:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:id="@+id/adressPhoneView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pharmacyAdress5"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="Кострома, ул. Сутырина, 16"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/pharmacyPhoneNumber5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="8(911)520-18-49"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pharmac6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    tools:ignore="TooManyViews,UselessParent">
+
+                    <TextView
+                        android:id="@+id/pharmacyNameAndTime6"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Антей \n\n с 09:00 до 20:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:id="@+id/adressPhoneView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pharmacyAdress6"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="Кострома, ул. Сутырина, 16"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/pharmacyPhoneNumber6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="8(911)520-18-49"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pharmac7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/pharmacyNameAndTime7"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Антей \n\n с 09:00 до 20:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:id="@+id/adressPhoneView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pharmacyAdress7"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="Кострома, ул. Сутырина, 16"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/pharmacyPhoneNumber7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="8(911)520-18-49"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pharmac8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/pharmacyNameAndTime8"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/infoback_fill"
+                        android:fontFamily="@font/nunito_regular"
+                        android:text="Антей \n\n с 09:00 до 20:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:id="@+id/adressPhoneView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pharmacyAdress8"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="Кострома, ул. Сутырина, 16"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/pharmacyPhoneNumber8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/infoback_fill"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="8(911)520-18-49"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="20sp"

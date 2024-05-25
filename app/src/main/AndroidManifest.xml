@@ -12,33 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AptekaMini"
         tools:targetApi="31">
-        <activity
-            android:name=".InfoViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PharmacyView"
-            android:exported="false" />
-        <activity
-            android:name=".SearchViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SearchView"
-            android:exported="false"
-            android:label="@string/title_activity_search_view"
-            android:theme="@style/Theme.AptekaMini.NoActionBar" />
-        <activity
-            android:name=".activity_search_view"
-            android:exported="false"
-            android:label="@string/title_activity_search_view"
-            android:theme="@style/Theme.AptekaMini" />
-        <activity
-            android:name=".MedicActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MedicomentsView"
-            android:exported="false"
-            android:label="@string/title_activity_medicoments_view"
-            android:theme="@style/Theme.AptekaMini" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -48,6 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <activity
+            android:name=".SearchViewActivity"
+            android:exported="false"
+            android:label="@string/title_activity_search_view"
+            android:theme="@style/Theme.AptekaMini.NoActionBar" />
+
+    </application>
 </manifest>

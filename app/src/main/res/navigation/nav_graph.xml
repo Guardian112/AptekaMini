@@ -3,26 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/mainView">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.aptekamini.FirstFragment"
+        android:id="@+id/mainView"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/activity_main">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_mainView_to_searchView"
+            app:destination="@id/searchView" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.aptekamini.SecondFragment"
+        android:id="@+id/searchView"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/activity_search_view">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_searchView_to_mainView"
+            app:destination="@id/mainView" />
     </fragment>
 </navigation>

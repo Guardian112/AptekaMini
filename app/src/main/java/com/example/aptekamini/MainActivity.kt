@@ -13,8 +13,6 @@ import com.example.aptekamini.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -63,5 +61,5 @@ class MainActivity : AppCompatActivity() {
             pharmacyLayout.isVisible = false
         }
     }
-
+    fun SearchOnClick(view: View) {}
 }
