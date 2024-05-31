@@ -7,20 +7,52 @@
 
     <fragment
         android:id="@+id/mainView"
-        android:label="@string/first_fragment_label"
         tools:layout="@layout/activity_main">
 
         <action
             android:id="@+id/action_mainView_to_searchView"
             app:destination="@id/searchView" />
+        <action
+            android:id="@+id/action_mainView_to_medic_infoView"
+            app:destination="@id/medicInfoView" />
+        <action
+            android:id="@+id/action_mainView_to_pharmacyinfoView"
+            app:destination="@id/pharmacyInfoView" />
     </fragment>
     <fragment
         android:id="@+id/searchView"
-        android:label="@string/second_fragment_label"
         tools:layout="@layout/activity_search_view">
 
         <action
             android:id="@+id/action_searchView_to_mainView"
             app:destination="@id/mainView" />
+    </fragment>
+    <fragment
+        android:id="@+id/pharmacyInfoView"
+        tools:layout="@layout/activity_medic_info">
+
+        <action
+            android:id="@+id/action_pharmacyInfoView_to_mainView"
+            app:destination="@id/mainView" />
+        <action
+            android:id="@+id/action_pharmacyInfoView_to_medicInfoView"
+            app:destination="@id/medicInfoView" />
+        <action
+            android:id="@+id/action_pharmacyInfoView_to_searchView"
+            app:destination="@id/searchView" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicInfoView"
+        tools:layout="@layout/activity_medic_info">
+
+        <action
+            android:id="@+id/action_infoView_to_mainView"
+            app:destination="@id/mainView" />
+        <action
+            android:id="@+id/action_medicInfoView_to_searchView"
+            app:destination="@id/searchView" />
+        <action
+            android:id="@+id/action_medicInfoView_to_pharmacyInfoView"
+            app:destination="@id/pharmacyInfoView" />
     </fragment>
 </navigation>

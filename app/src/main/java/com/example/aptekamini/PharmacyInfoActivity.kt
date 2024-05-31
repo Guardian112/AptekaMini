@@ -7,33 +7,34 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.aptekamini.databinding.ActivityMainBinding
+import com.example.aptekamini.databinding.ActivityMedicInfoBinding
+import com.example.aptekamini.databinding.ActivityPharmacyInfoBinding
 
-class MainActivity : AppCompatActivity() {
+class PharmacyInfoActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityPharmacyInfoBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_pharmacy_info)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityPharmacyInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
-    fun medicOnClick(view: View) {
-        val intent = Intent(this@MainActivity, MedicInfoActivity::class.java)
+    fun mainOnClick(view: View) {
+        val intent = Intent(this@PharmacyInfoActivity, MainActivity::class.java)
         startActivity(intent)
     }
-    fun pharmacyOnClick(view: View) {
-        val intent = Intent(this@MainActivity, PharmacyInfoActivity::class.java)
+    fun medicOnClick(view: View) {
+        val intent = Intent(this@PharmacyInfoActivity, MedicInfoActivity::class.java)
         startActivity(intent)
     }
     fun searchOnClick(view: View) {
-        val intent = Intent(this@MainActivity, SearchViewActivity::class.java)
+        val intent = Intent(this@PharmacyInfoActivity, SearchViewActivity::class.java)
         startActivity(intent)
     }
 }
