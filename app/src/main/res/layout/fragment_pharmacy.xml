@@ -14,10 +14,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/infoScrollView">
+        app:layout_constraintBottom_toTopOf="@id/pharmacRecView">
 
         <EditText
-            android:id="@+id/search_bar"
+            android:id="@+id/searchBar"
             android:layout_width="350dp"
             android:layout_height="55dp"
             android:layout_gravity="center|top"
@@ -66,6 +66,20 @@
 
     </FrameLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pharmacRecView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarSize="13dp"
+        android:scrollbarThumbVertical="@color/button"
+        android:scrollbarTrackVertical="@color/offbutton"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuPanel" />
+
     <ScrollView
         android:id="@+id/infoScrollView"
         android:layout_width="0dp"
@@ -78,7 +92,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuPanel">
+        app:layout_constraintTop_toBottomOf="@+id/menuPanel"
+        android:visibility="gone" >
 
         <LinearLayout
             android:id="@+id/infoLayout"

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/medic"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,UselessParent">
+
+        <TextView
+            android:id="@+id/medicName"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/infoback_fill"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Арбидол"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/dozirovka"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/infoback_fill"
+            android:fontFamily="@font/nunito_regular"
+            android:text="20 тб"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/prise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/imageback_fill"
+            android:fontFamily="@font/nunito_regular"
+            android:text="от 100 руб"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

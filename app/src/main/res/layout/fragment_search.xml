@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toTopOf="@id/searchScrollView">
 
         <EditText
-            android:id="@+id/search_bar"
+            android:id="@+id/searchBar"
             android:layout_width="350dp"
             android:layout_height="55dp"
             android:layout_gravity="center|top"
