@@ -16,24 +16,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/searchScrollView">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
+            android:id="@+id/search_bar"
             android:layout_width="350dp"
             android:layout_height="55dp"
             android:layout_gravity="center|top"
             android:layout_marginTop="30dp"
             android:background="@color/white"
+            android:ems="10"
+            android:hint="Введите запрос"
+            android:inputType="text"
             android:textColor="@color/black"
-            android:textSize="20sp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Введите запрос"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            android:textSize="18sp"
+            tools:ignore="Autofill,HardcodedText" />
 
         <Button
             android:id="@+id/goToMain"
