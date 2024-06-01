@@ -2,42 +2,25 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".PharmacyInfoActivity">
+    tools:context=".fragments.PharmacyFragment">
 
     <FrameLayout
         android:id="@+id/menuPanel"
         android:layout_width="match_parent"
-        android:layout_height="244dp"
+        android:layout_height="210dp"
         android:background="@color/menuback"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/infoScrollView">
 
-        <Button
-            android:id="@+id/searchButton"
-            android:layout_width="70dp"
-            android:layout_height="69dp"
-            android:layout_gravity="center|end|top"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/button"
-            android:fontFamily="@font/nunito_regular"
-            android:onClick="searchOnClick"
-            app:cornerRadius="22dp"
-            app:icon="@android:drawable/ic_menu_search"
-            app:iconSize="35sp" />
-
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="300dp"
-            android:layout_height="60dp"
+            android:layout_width="350dp"
+            android:layout_height="55dp"
             android:layout_gravity="center|top"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="20dp"
             android:background="@color/white"
             android:textColor="@color/black"
             android:textSize="20sp">
@@ -47,7 +30,7 @@
                 android:layout_height="match_parent"
                 android:hint="Введите запрос"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 tools:ignore="HardcodedText" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -55,34 +38,34 @@
         <Button
             android:id="@+id/goToMedic"
             android:layout_width="180dp"
-            android:layout_height="75dp"
+            android:layout_height="60dp"
             android:layout_gravity="bottom|left"
             android:layout_marginStart="20dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="25dp"
             android:backgroundTint="@color/button"
             android:fontFamily="@font/nunito_regular"
             android:onClick="medicOnClick"
             android:text="Лекарства"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:cornerRadius="22dp"
             tools:ignore="HardcodedText,RtlHardcoded,TextSizeCheck" />
 
         <Button
             android:id="@+id/goToMainRight"
             android:layout_width="180dp"
-            android:layout_height="75dp"
+            android:layout_height="60dp"
             android:layout_gravity="bottom|right"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="25dp"
             android:backgroundTint="@color/button"
             android:fontFamily="@font/nunito_regular"
             android:onClick="mainOnClick"
             android:text="Главная"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:cornerRadius="22dp"
             tools:ignore="HardcodedText,RtlHardcoded" />
 

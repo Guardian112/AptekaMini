@@ -3,56 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainView">
-
+    app:startDestination="@id/mainFragment">
     <fragment
-        android:id="@+id/mainView"
-        tools:layout="@layout/activity_main">
-
+        android:id="@+id/mainFragment"
+        android:name="com.example.aptekamini.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainView_to_searchView"
-            app:destination="@id/searchView" />
+            android:id="@+id/action_mainFragment_to_pharmacyFragment"
+            app:destination="@id/pharmacyFragment" />
         <action
-            android:id="@+id/action_mainView_to_medic_infoView"
-            app:destination="@id/medicInfoView" />
-        <action
-            android:id="@+id/action_mainView_to_pharmacyinfoView"
-            app:destination="@id/pharmacyInfoView" />
+            android:id="@+id/action_mainFragment_to_medicFragment"
+            app:destination="@id/medicFragment" />
     </fragment>
     <fragment
-        android:id="@+id/searchView"
-        tools:layout="@layout/activity_search_view">
-
+        android:id="@+id/medicFragment"
+        android:name="com.example.aptekamini.fragments.MedicFragment"
+        android:label="fragment_medic"
+        tools:layout="@layout/fragment_medic" >
         <action
-            android:id="@+id/action_searchView_to_mainView"
-            app:destination="@id/mainView" />
+            android:id="@+id/action_medicFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_medicFragment_to_pharmacyFragment"
+            app:destination="@id/pharmacyFragment" />
     </fragment>
     <fragment
-        android:id="@+id/pharmacyInfoView"
-        tools:layout="@layout/activity_medic_info">
-
+        android:id="@+id/pharmacyFragment"
+        android:name="com.example.aptekamini.fragments.PharmacyFragment"
+        android:label="fragment_pharmacy"
+        tools:layout="@layout/fragment_pharmacy" >
         <action
-            android:id="@+id/action_pharmacyInfoView_to_mainView"
-            app:destination="@id/mainView" />
+            android:id="@+id/action_pharmacyFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
         <action
-            android:id="@+id/action_pharmacyInfoView_to_medicInfoView"
-            app:destination="@id/medicInfoView" />
-        <action
-            android:id="@+id/action_pharmacyInfoView_to_searchView"
-            app:destination="@id/searchView" />
-    </fragment>
-    <fragment
-        android:id="@+id/medicInfoView"
-        tools:layout="@layout/activity_medic_info">
-
-        <action
-            android:id="@+id/action_infoView_to_mainView"
-            app:destination="@id/mainView" />
-        <action
-            android:id="@+id/action_medicInfoView_to_searchView"
-            app:destination="@id/searchView" />
-        <action
-            android:id="@+id/action_medicInfoView_to_pharmacyInfoView"
-            app:destination="@id/pharmacyInfoView" />
+            android:id="@+id/action_pharmacyFragment_to_medicFragment"
+            app:destination="@id/medicFragment" />
     </fragment>
 </navigation>
