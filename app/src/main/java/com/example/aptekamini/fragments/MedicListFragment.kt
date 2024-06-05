@@ -1,7 +1,6 @@
 package com.example.aptekamini.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
@@ -12,6 +11,7 @@ import android.widget.Button
 import android.widget.SearchView
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -19,6 +19,7 @@ import com.example.aptekamini.MainActivity
 import com.example.aptekamini.R
 import com.example.aptekamini.adapter.MedicListAdapter
 import com.example.aptekamini.databinding.FragmentMedicListBinding
+import com.example.aptekamini.model.MedicEntity
 import com.example.aptekamini.viewModel.MedicViewModel
 
 class MedicListFragment: Fragment(R.layout.fragment_medic_list), SearchView.OnQueryTextListener, MenuProvider {
@@ -52,6 +53,19 @@ class MedicListFragment: Fragment(R.layout.fragment_medic_list), SearchView.OnQu
         }
     }
 
+    private fun updateUI(medic: List<MedicEntity>?){
+        if (medic != null){
+            if (medic.isNotEmpty()){
+                binding.appAvatar.visibility = View.GONE
+                binding.medicList.visibility = View.VISIBLE
+            }
+            else {
+                binding.appAvatar.visibility = View.VISIBLE
+                binding.medicList.visibility = View.GONE
+            }
+        }
+    }
+
     private fun setupMedicRecyclerView(){
         medicListAdapter = MedicListAdapter()
         binding.medicList.apply {
@@ -69,8 +83,9 @@ class MedicListFragment: Fragment(R.layout.fragment_medic_list), SearchView.OnQu
     private fun searchMedic(query: String?){
         val searchQuery = "%$query"
 
-        medicViewModel.searchMedic(searchQuery).observe(this) {list ->
-            medicListAdapter.differ.submitList(list)
+        medicViewModel.searchMedic(searchQuery).observe(this) {medic ->
+            medicListAdapter.differ.submitList(medic)
+            updateUI(medic)
         }
     }
 
@@ -91,9 +106,9 @@ class MedicListFragment: Fragment(R.layout.fragment_medic_list), SearchView.OnQu
         menu.clear()
         menuInflater.inflate(R.menu.search_menu, menu)
 
-        val menuSearch = menu.findItem(R.id.searchMenu).actionView as SearchView
-        menuSearch.isSubmitButtonEnabled = false
-        menuSearch.setOnQueryTextListener(this)
+        val menuSearch = menu.findItem(R.id.searchMenu).actionView as? SearchView
+        menuSearch?.isSubmitButtonEnabled = false
+        menuSearch?.setOnQueryTextListener(this)
     }
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
         return false

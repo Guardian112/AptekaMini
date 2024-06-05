@@ -3,7 +3,6 @@ package com.example.aptekamini.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.room.Query
 import com.example.aptekamini.model.MedicEntity
 import com.example.aptekamini.repository.Repository
 import kotlinx.coroutines.Dispatchers

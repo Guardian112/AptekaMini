@@ -7,9 +7,9 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.aptekamini.model.AvailabilityEntity
 import com.example.aptekamini.model.MedicEntity
 import com.example.aptekamini.model.PharmacyEntity
+
 /*
 *   Database access object
 *   Написание SLQ запросов для добавления, изменения, удаления, вывода и поиска данных из БД

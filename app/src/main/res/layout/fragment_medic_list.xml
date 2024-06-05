@@ -6,12 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".fragments.MedicListFragment">
 
+    <ImageView
+        android:id="@+id/appAvatar"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:contentDescription="AppAvatar"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuPanel"
+        app:srcCompat="@drawable/symbol"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
     <FrameLayout
         android:id="@+id/menuPanel"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/menuBack"
-        app:layout_constraintBottom_toTopOf="@id/medicList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -40,6 +52,7 @@
         android:scrollbarThumbVertical="@color/button"
         android:scrollbarTrackVertical="@color/offbutton"
         android:scrollbars="vertical"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
