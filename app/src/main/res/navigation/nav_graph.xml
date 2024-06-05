@@ -49,5 +49,10 @@
         android:id="@+id/medicInfoFragment"
         android:name="com.example.aptekamini.fragments.MedicInfoFragment"
         android:label="fragment_medic_info"
-        tools:layout="@layout/fragment_medic_info" />
+        tools:layout="@layout/fragment_medic_info" >
+        <argument
+            android:name="medic"
+            app:argType="com.example.aptekamini.model.MedicEntity"
+            app:nullable="true" />
+    </fragment>
 </navigation>

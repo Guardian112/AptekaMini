@@ -7,9 +7,6 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aptekamini.databinding.MedicLayoutBinding
-import com.example.aptekamini.fragments.MainFragment
-import com.example.aptekamini.fragments.MainFragmentDirections
-import com.example.aptekamini.fragments.MedicListFragment
 import com.example.aptekamini.fragments.MedicListFragmentDirections
 import com.example.aptekamini.model.MedicEntity
 
@@ -52,7 +49,7 @@ class MedicListAdapter: RecyclerView.Adapter<MedicListAdapter.MedicHolder>() {
         holder.itemBinding.dozirovka.text = currentMedic.dosage
 
         holder.itemView.setOnClickListener{
-            val direction = MedicListFragmentDirections.actionMedicListFragmentToMedicInfoFragment()
+            val direction = MedicListFragmentDirections.actionMedicListFragmentToMedicInfoFragment(currentMedic)
             it.findNavController().navigate(direction)
         }
     }
