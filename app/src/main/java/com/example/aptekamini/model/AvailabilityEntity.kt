@@ -1,11 +1,14 @@
-package com.example.aptekamini.database.entities
+package com.example.aptekamini.model
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
 @Entity(tableName = "Availability")
+@Parcelize
 data class AvailabilityEntity (
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
@@ -17,4 +20,4 @@ data class AvailabilityEntity (
     var price: Int,
     @ColumnInfo(name = "quantity")
     var quantity: Int
-)
+): Parcelable

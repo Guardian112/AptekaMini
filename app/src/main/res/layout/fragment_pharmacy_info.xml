@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PharmacyInfoFragment">
+
+
+    <TextView
+        android:id="@+id/pharmacyInfoName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Название аптеки"
+        app:layout_constraintEnd_toStartOf="@+id/pharmacyInfoWorkTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pharmacyInfoWorkTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:text="Время работы"
+        app:layout_constraintBottom_toBottomOf="@+id/pharmacyInfoName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pharmacyInfoName"
+        app:layout_constraintTop_toTopOf="@+id/pharmacyInfoName" />
+
+    <TextView
+        android:id="@+id/pharmacyInfoAdress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:text="Адрес"
+        app:layout_constraintEnd_toStartOf="@+id/pharmacyInfoNumber"
+        app:layout_constraintStart_toStartOf="@+id/pharmacyInfoName"
+        app:layout_constraintTop_toBottomOf="@+id/pharmacyInfoName" />
+
+    <TextView
+        android:id="@+id/pharmacyInfoNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:text="Номер телефона"
+        app:layout_constraintBottom_toBottomOf="@+id/pharmacyInfoAdress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pharmacyInfoAdress"
+        app:layout_constraintTop_toTopOf="@+id/pharmacyInfoAdress" />
+
+    <TextView
+        android:id="@+id/pharmacyPriseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Медикаменты в наличии"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pharmacyInfoAdress" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/medicPriseList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:scrollbarSize="13dp"
+        android:scrollbarThumbVertical="@color/button"
+        android:scrollbarTrackVertical="@color/offbutton"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pharmacyPriseText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

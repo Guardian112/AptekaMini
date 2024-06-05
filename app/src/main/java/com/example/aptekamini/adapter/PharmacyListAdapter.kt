@@ -1,4 +1,4 @@
-package com.example.aptekamini.recyclerView.viewAdapters
+package com.example.aptekamini.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -6,14 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aptekamini.R
-import com.example.aptekamini.databinding.PatternPharmacyBinding
-import com.example.aptekamini.recyclerView.models.PharmacyModel
+import com.example.aptekamini.databinding.PharmacyLayoutBinding
+import com.example.aptekamini.model.PharmacyEntity
 
-class PharmacyAdapter: RecyclerView.Adapter<PharmacyAdapter.PharmacyHolder>()  {
-    val pharmacyModelList = ArrayList<PharmacyModel>()
+class PharmacyListAdapter: RecyclerView.Adapter<PharmacyListAdapter.PharmacyHolder>()  {
+    val pharmacyModelList = ArrayList<PharmacyEntity>()
     class PharmacyHolder(item: View): RecyclerView.ViewHolder(item)  {
-        val binding = PatternPharmacyBinding.bind(item)
-        fun bind(pharmacyModel: PharmacyModel) = with(binding) {
+        val binding = PharmacyLayoutBinding.bind(item)
+        fun bind(pharmacyModel: PharmacyEntity) = with(binding) {
             pharmacyName.text = pharmacyModel.name
             time.text = pharmacyModel.address
             adress.text = pharmacyModel.workSchedule
@@ -22,7 +22,7 @@ class PharmacyAdapter: RecyclerView.Adapter<PharmacyAdapter.PharmacyHolder>()  {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PharmacyHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.pattern_pharmacy, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.pharmacy_layout, parent, false)
         return PharmacyHolder(view)
     }
 
@@ -35,7 +35,7 @@ class PharmacyAdapter: RecyclerView.Adapter<PharmacyAdapter.PharmacyHolder>()  {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun addPharmacy(pharmacyModel: PharmacyModel) {
+    fun addPharmacy(pharmacyModel: PharmacyEntity) {
         pharmacyModelList.add(pharmacyModel)
         notifyDataSetChanged()
     }

@@ -1,19 +1,48 @@
 package com.example.aptekamini.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.aptekamini.database.entities.MedicEntity
-import com.example.aptekamini.database.entities.PharmacyEntity
-import com.example.aptekamini.database.entities.AvailabilityEntity
-import kotlinx.coroutines.flow.Flow
-
+import androidx.room.Update
+import com.example.aptekamini.model.AvailabilityEntity
+import com.example.aptekamini.model.MedicEntity
+import com.example.aptekamini.model.PharmacyEntity
+/*
+*   Database access object
+*   Написание SLQ запросов для добавления, изменения, удаления, вывода и поиска данных из БД
+*/
 @Dao
 interface Dao {
-    @Insert
-    fun insertMedic(medicEntity: MedicEntity)
-    @Query("SELECT name, dosage FROM Medicament ORDER BY id")
-    fun detAllMedic(): Flow<List<MedicEntity>>
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun addMedic(medicEntity: MedicEntity)
+
+    @Update
+    fun updateMedic(medicEntity: MedicEntity)
+
+    @Delete
+    fun deleteMedic(medicEntity: MedicEntity)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun addPharmacy(pharmacyEntity: PharmacyEntity)
+
+    @Update
+    fun updatePharmacy(pharmacyEntity: PharmacyEntity)
+
+    @Delete
+    fun deletePharmacy(pharmacyEntity: PharmacyEntity)
+
+    @Query("SELECT * FROM Medicament ORDER BY id")
+    fun getAllMedic(): LiveData<List<MedicEntity>>
+
     @Query("SELECT * FROM Pharmacy ORDER BY id")
-    fun detAllPharmacy(): Flow<List<PharmacyEntity>>
+    fun getAllPharmacy(): LiveData<List<PharmacyEntity>>
+
+    @Query("SELECT * FROM Medicament WHERE name LIKE :query")
+    fun searchMedic(query: String?): LiveData<List<MedicEntity>>
+
+    @Query("SELECT * FROM Pharmacy WHERE name LIKE :query")
+    fun searchPharmacy(query: String?): LiveData<List<PharmacyEntity>>
 }

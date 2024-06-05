@@ -8,25 +8,24 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.example.aptekamini.R
+import com.example.aptekamini.databinding.FragmentPharmacyListBinding
 
-class MedicFragment: Fragment() {
+class PharmacyListFragment: Fragment() {
+    private var _binding: FragmentPharmacyListBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_medic, container, false)
+        _binding = FragmentPharmacyListBinding.inflate(inflater, container, false)
+        return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val bF1 = view.findViewById<Button>(R.id.goToMainLeft)
-        val bF2 = view.findViewById<Button>(R.id.goToPharmacy)
+        val bF1 = view.findViewById<Button>(R.id.goToMain)
         val controller = findNavController()
         bF1.setOnClickListener {
-            controller.navigate(R.id.action_medicFragment_to_mainFragment)
-        }
-        bF2.setOnClickListener {
-            controller.navigate(R.id.action_medicFragment_to_pharmacyFragment)
+            controller.navigate(R.id.action_pharmacyListFragment_to_mainFragment)
         }
     }
 }
