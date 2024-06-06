@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:minHeight="40dp"
     android:layout_margin="8dp"
     app:cardElevation="6dp"
     app:cardCornerRadius="10dp" >
@@ -11,14 +12,15 @@
     <LinearLayout
         android:id="@+id/medic"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
         android:orientation="horizontal"
         android:background="@drawable/border" >
 
         <TextView
             android:id="@+id/medicName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:minWidth="250dp"
             android:maxWidth="300dp"
             android:fontFamily="@font/nunito_regular"
@@ -31,7 +33,7 @@
         <TextView
             android:id="@+id/dozirovka"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@drawable/border"
             android:fontFamily="@font/nunito_regular"
             android:text="Дозир."
