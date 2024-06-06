@@ -69,7 +69,7 @@ class PharmacyListFragment: Fragment(R.layout.fragment_pharmacy_list), SearchVie
             setHasFixedSize(true)
             adapter = pharmacyListAdapter
         }
-         activity?.let {
+        activity?.let {
             pharmacyViewModel.getAllPharmacy().observe(viewLifecycleOwner){ pharmacy ->
                 pharmacyListAdapter.differ.submitList(pharmacy)
             }

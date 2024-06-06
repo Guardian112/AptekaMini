@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.PharmacyInfoFragment">
 
-
     <TextView
         android:id="@+id/pharmacyInfoName"
         android:layout_width="0dp"
@@ -15,6 +14,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:text="Название аптеки"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/pharmacyInfoWorkTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +27,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="15dp"
         android:text="Время работы"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/pharmacyInfoName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pharmacyInfoName"
@@ -38,6 +41,8 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="10dp"
         android:text="Адрес"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/pharmacyInfoNumber"
         app:layout_constraintStart_toStartOf="@+id/pharmacyInfoName"
         app:layout_constraintTop_toBottomOf="@+id/pharmacyInfoName" />
@@ -49,6 +54,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="15dp"
         android:text="Номер телефона"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/pharmacyInfoAdress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pharmacyInfoAdress"
@@ -59,7 +66,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Медикаменты в наличии"
+        android:text="Лекарства в наличии"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pharmacyInfoAdress" />
@@ -72,7 +81,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:scrollbarSize="13dp"
         android:scrollbarThumbVertical="@color/button"
         android:scrollbarTrackVertical="@color/offbutton"
         android:scrollbars="vertical"

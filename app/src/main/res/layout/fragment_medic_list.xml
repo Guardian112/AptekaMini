@@ -57,7 +57,6 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
-        android:scrollbarSize="13dp"
         android:scrollbarThumbVertical="@color/button"
         android:scrollbarTrackVertical="@color/offbutton"
         android:scrollbars="vertical"

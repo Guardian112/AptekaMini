@@ -8,25 +8,24 @@ import com.example.aptekamini.repository.Repository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MedicViewModel(app: Application, private val medicRepository: Repository): AndroidViewModel(app) {
+class MedicViewModel(app: Application, private val repository: Repository): AndroidViewModel(app) {
 
     fun addMedic(medicEntity: MedicEntity) =
         viewModelScope.launch(Dispatchers.IO) {
-            medicRepository.addMedic(medicEntity)
+            repository.addMedic(medicEntity)
         }
 
     fun updateMedic(medicEntity: MedicEntity) =
         viewModelScope.launch(Dispatchers.IO) {
-            medicRepository.updateMedic(medicEntity)
+            repository.updateMedic(medicEntity)
         }
 
     fun deleteMedic(medicEntity: MedicEntity) =
         viewModelScope.launch(Dispatchers.IO) {
-            medicRepository.deleteMedic(medicEntity)
+            repository.deleteMedic(medicEntity)
         }
 
-    fun getAllMedic() = medicRepository.getAllMedic()
+    fun getAllMedic() = repository.getAllMedic()
 
-    fun searchMedic(query: String?) = medicRepository.searchMedic(query)
-
+    fun searchMedic(query: String?) = repository.searchMedic(query)
 }

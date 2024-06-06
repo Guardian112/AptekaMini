@@ -8,23 +8,23 @@ import com.example.aptekamini.repository.Repository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class PharmacyViewModel(app: Application, private val pharmacyRepository: Repository): AndroidViewModel(app) {
+class PharmacyViewModel(app: Application, private val repository: Repository): AndroidViewModel(app) {
     fun addPharmacy(pharmacyEntity: PharmacyEntity) =
         viewModelScope.launch(Dispatchers.IO) {
-            pharmacyRepository.addPharmacy(pharmacyEntity)
+            repository.addPharmacy(pharmacyEntity)
         }
 
     fun updatePharmacy(pharmacyEntity: PharmacyEntity) =
         viewModelScope.launch(Dispatchers.IO) {
-            pharmacyRepository.updatePharmacy(pharmacyEntity)
+            repository.updatePharmacy(pharmacyEntity)
         }
 
     fun deletePharmacy(pharmacyEntity: PharmacyEntity) =
         viewModelScope.launch(Dispatchers.IO) {
-            pharmacyRepository.deletePharmacy(pharmacyEntity)
+            repository.deletePharmacy(pharmacyEntity)
         }
 
-    fun getAllPharmacy() = pharmacyRepository.getAllPharmacy()
+    fun getAllPharmacy() = repository.getAllPharmacy()
 
-    fun searchPharmacy(query: String?) = pharmacyRepository.searchPharmacy(query)
+    fun searchPharmacy(query: String?) = repository.searchPharmacy(query)
 }
