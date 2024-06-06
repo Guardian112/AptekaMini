@@ -3,7 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="button">#0E9259</color>
-    <color name="menuback">#0EAD69</color>
+    <color name="menuBack">#0EAD69</color>
     <color name="imageback">#B3F3D8</color>
     <color name="offbutton">#7AD7AF</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
 </resources>
