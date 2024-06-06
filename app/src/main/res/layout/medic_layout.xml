@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardElevation="6dp"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="10dp" >
 
     <LinearLayout
         android:id="@+id/medic"
@@ -19,6 +19,8 @@
             android:id="@+id/medicName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minWidth="250dp"
+            android:maxWidth="300dp"
             android:fontFamily="@font/nunito_regular"
             android:text="Название лекарства"
             android:textAlignment="center"

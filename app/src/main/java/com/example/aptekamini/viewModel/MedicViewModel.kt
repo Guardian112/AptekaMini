@@ -28,4 +28,5 @@ class MedicViewModel(app: Application, private val medicRepository: Repository):
     fun getAllMedic() = medicRepository.getAllMedic()
 
     fun searchMedic(query: String?) = medicRepository.searchMedic(query)
+
 }

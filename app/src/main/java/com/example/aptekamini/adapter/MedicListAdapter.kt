@@ -15,9 +15,11 @@ import com.example.aptekamini.model.MedicEntity
 */
 class MedicListAdapter: RecyclerView.Adapter<MedicListAdapter.MedicHolder>() {
     class MedicHolder(val itemBinding: MedicLayoutBinding): RecyclerView.ViewHolder(itemBinding.root)
+
 /*
 *   Сравнение элементов с модели с элементами из БД
 */
+
     private val differCallback = object : DiffUtil.ItemCallback<MedicEntity>() {
         override fun areItemsTheSame(oldItem: MedicEntity, newItem: MedicEntity): Boolean {
             return oldItem.id == newItem.id &&
