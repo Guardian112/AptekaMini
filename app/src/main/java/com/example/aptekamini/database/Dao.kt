@@ -34,10 +34,10 @@ interface Dao {
     @Delete
     fun deletePharmacy(pharmacyEntity: PharmacyEntity)
 
-    @Query("SELECT * FROM Medicament ORDER BY id")
+    @Query("SELECT * FROM Medicament ORDER BY name")
     fun getAllMedic(): LiveData<List<MedicEntity>>
 
-    @Query("SELECT * FROM Pharmacy ORDER BY id")
+    @Query("SELECT * FROM Pharmacy ORDER BY name")
     fun getAllPharmacy(): LiveData<List<PharmacyEntity>>
 
     @Query("SELECT * FROM Medicament WHERE name LIKE :query")

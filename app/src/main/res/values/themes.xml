@@ -11,10 +11,6 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-    </style>
-
-    <style name="ThemeOverlay.AptekaMini.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
-        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+        <item name="android:actionBarTheme">?attr/colorSecondaryVariant</item>
     </style>
 </resources>

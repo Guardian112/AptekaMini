@@ -27,5 +27,4 @@ class PharmacyViewModel(app: Application, private val pharmacyRepository: Reposi
     fun getAllPharmacy() = pharmacyRepository.getAllPharmacy()
 
     fun searchPharmacy(query: String?) = pharmacyRepository.searchPharmacy(query)
-
 }
