@@ -11,33 +11,53 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_pharmacyFragment"
-            app:destination="@id/pharmacyFragment" />
+            app:destination="@id/pharmacyListFragment" />
         <action
             android:id="@+id/action_mainFragment_to_medicFragment"
-            app:destination="@id/medicFragment" />
+            app:destination="@id/medicListFragment" />
     </fragment>
     <fragment
-        android:id="@+id/medicFragment"
-        android:name="com.example.aptekamini.fragments.MedicFragment"
+        android:id="@+id/medicListFragment"
+        android:name="com.example.aptekamini.fragments.MedicListFragment"
         android:label="fragment_medic"
-        tools:layout="@layout/fragment_medic" >
+        tools:layout="@layout/fragment_medic_list" >
         <action
-            android:id="@+id/action_medicFragment_to_mainFragment"
+            android:id="@+id/action_medicListFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
         <action
-            android:id="@+id/action_medicFragment_to_pharmacyFragment"
-            app:destination="@id/pharmacyFragment" />
+            android:id="@+id/action_medicListFragment_to_medicInfoFragment"
+            app:destination="@id/medicInfoFragment" />
     </fragment>
     <fragment
-        android:id="@+id/pharmacyFragment"
-        android:name="com.example.aptekamini.fragments.PharmacyFragment"
+        android:id="@+id/pharmacyListFragment"
+        android:name="com.example.aptekamini.fragments.PharmacyListFragment"
         android:label="fragment_pharmacy"
-        tools:layout="@layout/fragment_pharmacy" >
+        tools:layout="@layout/fragment_pharmacy_list" >
         <action
-            android:id="@+id/action_pharmacyFragment_to_mainFragment"
+            android:id="@+id/action_pharmacyListFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
         <action
-            android:id="@+id/action_pharmacyFragment_to_medicFragment"
-            app:destination="@id/medicFragment" />
+            android:id="@+id/action_pharmacyListFragment_to_pharmacyInfoFragment"
+            app:destination="@id/pharmacyInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pharmacyInfoFragment"
+        android:name="com.example.aptekamini.fragments.PharmacyInfoFragment"
+        android:label="fragment_pharmacy_info"
+        tools:layout="@layout/fragment_pharmacy_info" >
+        <argument
+            android:name="pharmacy"
+            app:argType="com.example.aptekamini.model.PharmacyEntity"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicInfoFragment"
+        android:name="com.example.aptekamini.fragments.MedicInfoFragment"
+        android:label="fragment_medic_info"
+        tools:layout="@layout/fragment_medic_info" >
+        <argument
+            android:name="medic"
+            app:argType="com.example.aptekamini.model.MedicEntity"
+            app:nullable="true" />
     </fragment>
 </navigation>

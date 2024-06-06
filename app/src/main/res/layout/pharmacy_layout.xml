@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="10dp" >
+
+    <LinearLayout
+        android:id="@+id/pharmacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:maxHeight="80dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/nameAndTimeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="200dp"
+            android:maxWidth="300dp"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pharmacyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:text="Название аптеки"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:minHeight="40dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunito_regular"
+                android:text="Время работы"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adressAndPhoneView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/adress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:text="Адрес"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:minHeight="40dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:text="Телефон"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
