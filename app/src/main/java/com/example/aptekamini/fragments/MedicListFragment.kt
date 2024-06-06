@@ -1,6 +1,7 @@
 package com.example.aptekamini.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
@@ -82,10 +83,16 @@ class MedicListFragment: Fragment(R.layout.fragment_medic_list), SearchView.OnQu
 
     private fun searchMedic(query: String?){
         val searchQuery = "%$query"
+        Log.d("SearchMedic", "Query: $searchQuery")
 
         medicViewModel.searchMedic(searchQuery).observe(this) {medic ->
-            medicListAdapter.differ.submitList(medic)
-            updateUI(medic)
+            if (medic != null && medic.isNotEmpty()) {
+                medicListAdapter.differ.submitList(medic)
+                updateUI(medic)
+            }
+            else {
+                Log.d("SearchMedic", "No data found for query: $searchQuery")
+            }
         }
     }
 

@@ -4,24 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.MedicInfoFragment" >
+    tools:context=".fragments.MedicInfoFragment"
+    android:padding="12dp" >
 
     <TextView
-        android:id="@+id/medicInfoName"
+        android:id="@+id/editMedicView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Информация о лекарстве"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editMedicInfoName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="10dp"
         android:text="Название лекарства"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/medicInfoDosage"
+        android:padding="8dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
+        app:layout_constraintEnd_toStartOf="@+id/editMedicInfoDosage"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editMedicView"
+        tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/medicInfoDosage"
+    <EditText
+        android:id="@+id/editMedicInfoDosage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -29,13 +48,17 @@
         android:text="Дозировка"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/medicInfoName"
+        android:padding="8dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/editMedicInfoName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/medicInfoName"
-        app:layout_constraintTop_toTopOf="@+id/medicInfoName" />
+        app:layout_constraintStart_toEndOf="@+id/editMedicInfoName"
+        app:layout_constraintTop_toTopOf="@+id/editMedicInfoName"
+        tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/medicInfoDescription"
+    <EditText
+        android:id="@+id/editMedicInfoDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -44,9 +67,13 @@
         android:text="Описание"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:padding="8dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medicInfoName" />
+        app:layout_constraintTop_toBottomOf="@+id/editMedicInfoName"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/pharmacyPriseText"
@@ -55,10 +82,13 @@
         android:layout_marginTop="25dp"
         android:text="Наличие в аптеках"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:fontFamily="@font/nunito_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medicInfoDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/editMedicInfoDescription"
+        tools:ignore="HardcodedText" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pharmacyPriseList"
@@ -72,9 +102,50 @@
         android:scrollbarThumbVertical="@color/button"
         android:scrollbarTrackVertical="@color/offbutton"
         android:scrollbars="vertical"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pharmacyPriseText" />
+        app:layout_constraintTop_toBottomOf="@+id/pharmacyPriseText"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
+        android:gravity="center"
+        android:hint="Будет добавлено в будущих версиях"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pharmacyPriseText"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editMedicBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/menuBack"
+        android:clickable="true"
+        android:contentDescription="editMed"
+        android:src="@drawable/ic_check"
+        android:tintMode="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

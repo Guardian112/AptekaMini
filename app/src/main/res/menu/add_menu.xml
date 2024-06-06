@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" >
     <item
-        android:id="@+id/searchMenu"
-        android:icon="@drawable/ic_search"
-        android:title="Search"
-        app:showAsAction="ifRoom"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:id="@+id/saveMenu"
+        android:icon="@drawable/ic_save"
+        android:title="Save"
+        app:showAsAction="always"
         tools:ignore="HardcodedText" />
 </menu>

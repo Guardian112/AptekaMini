@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AddMedicFragment"
+    android:padding="12dp" >
+
+    <TextView
+        android:id="@+id/addMedicText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Добавление нового лекарства"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addMedicName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textSize="18sp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
+        android:hint="Введите название"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMedicText" />
+
+    <EditText
+        android:id="@+id/addMedicDosage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textSize="18sp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
+        android:hint="Введите дозировку"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMedicName" />
+
+    <EditText
+        android:id="@+id/addMedicDescription"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="top"
+        android:padding="8dp"
+        android:hint="Введите описание лекарства"
+        android:textSize="18sp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMedicDosage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

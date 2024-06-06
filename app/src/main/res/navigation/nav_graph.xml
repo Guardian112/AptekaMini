@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_medicListFragment_to_medicInfoFragment"
             app:destination="@id/medicInfoFragment" />
+        <action
+            android:id="@+id/action_medicListFragment_to_addMedicFragment"
+            app:destination="@id/addMedicFragment" />
     </fragment>
     <fragment
         android:id="@+id/pharmacyListFragment"
@@ -39,6 +42,9 @@
         <action
             android:id="@+id/action_pharmacyListFragment_to_pharmacyInfoFragment"
             app:destination="@id/pharmacyInfoFragment" />
+        <action
+            android:id="@+id/action_pharmacyListFragment_to_addPharmacyFragment"
+            app:destination="@id/addPharmacyFragment" />
     </fragment>
     <fragment
         android:id="@+id/pharmacyInfoFragment"
@@ -49,6 +55,9 @@
             android:name="pharmacy"
             app:argType="com.example.aptekamini.model.PharmacyEntity"
             app:nullable="true" />
+        <action
+            android:id="@+id/action_pharmacyInfoFragment_to_pharmacyListFragment"
+            app:destination="@id/pharmacyListFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicInfoFragment"
@@ -59,5 +68,26 @@
             android:name="medic"
             app:argType="com.example.aptekamini.model.MedicEntity"
             app:nullable="true" />
+        <action
+            android:id="@+id/action_medicInfoFragment_to_medicListFragment"
+            app:destination="@id/medicListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMedicFragment"
+        android:name="com.example.aptekamini.fragments.AddMedicFragment"
+        android:label="fragment_add_medic"
+        tools:layout="@layout/fragment_add_medic" >
+        <action
+            android:id="@+id/action_addMedicFragment_to_medicListFragment"
+            app:destination="@id/medicListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPharmacyFragment"
+        android:name="com.example.aptekamini.fragments.AddPharmacyFragment"
+        android:label="fragment_add_pharmacy"
+        tools:layout="@layout/fragment_add_pharmacy" >
+        <action
+            android:id="@+id/action_addPharmacyFragment_to_pharmacyListFragment"
+            app:destination="@id/pharmacyListFragment" />
     </fragment>
 </navigation>
