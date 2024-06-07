@@ -14,6 +14,7 @@ import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.aptekamini.MainActivity
@@ -39,7 +40,6 @@ class MedicListFragment: Fragment(R.layout.fragment_medic_list), SearchView.OnQu
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val goToMain = view.findViewById<Button>(R.id.goToMain)
         val controller = findNavController()
 
@@ -47,6 +47,11 @@ class MedicListFragment: Fragment(R.layout.fragment_medic_list), SearchView.OnQu
         menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
         medicViewModel = (activity as MainActivity).medicViewModel
+
+        binding.addMedicBut.setOnClickListener(){
+            it.findNavController().navigate(R.id.action_medicListFragment_to_addMedicFragment)
+        }
+
         setupMedicRecyclerView()
 
         goToMain.setOnClickListener {

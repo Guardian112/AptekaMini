@@ -31,7 +31,6 @@ class AddMedicFragment : Fragment(R.layout.fragment_add_medic), MenuProvider {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         addMedicBinding = FragmentAddMedicBinding.inflate(inflater, container, false)
         return binding.root
     }

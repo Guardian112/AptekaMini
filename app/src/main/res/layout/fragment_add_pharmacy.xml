@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:padding="8dp"
         android:text="Добавление новой аптеки"
         android:textColor="@color/black"
@@ -20,72 +20,120 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/namePharmacyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="8dp"
+        android:text="Введите название аптеки"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/addPharmacyText"
+        app:layout_constraintTop_toBottomOf="@+id/addPharmacyText" />
+
     <EditText
         android:id="@+id/addPharmacyName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/border"
         android:fontFamily="@font/nunito_regular"
-        android:hint="Введите название"
+        android:hint="Название"
+        android:textColor="@color/black"
         android:maxLines="1"
         android:padding="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addPharmacyText" />
+        app:layout_constraintTop_toBottomOf="@+id/namePharmacyText" />
+
+    <TextView
+        android:id="@+id/timePharmacyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="8dp"
+        android:text="Введите время работы аптеки"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/addPharmacyName"
+        app:layout_constraintTop_toBottomOf="@+id/addPharmacyName" />
 
     <EditText
         android:id="@+id/addPharmacyWorkTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/border"
         android:fontFamily="@font/nunito_regular"
-        android:hint="Введите время работы"
+        android:hint="Время работы"
+        android:textColor="@color/black"
         android:maxLines="1"
         android:padding="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addPharmacyName" />
+        app:layout_constraintTop_toBottomOf="@+id/timePharmacyText" />
+
+    <TextView
+        android:id="@+id/adressPharmacyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="8dp"
+        android:text="Введите адрес аптеки"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/addPharmacyWorkTime"
+        app:layout_constraintTop_toBottomOf="@+id/addPharmacyWorkTime" />
 
     <EditText
         android:id="@+id/addPharmacyAdress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/border"
         android:fontFamily="@font/nunito_regular"
-        android:hint="Введите адрес аптеки"
+        android:hint="Адрес аптеки"
+        android:textColor="@color/black"
         android:maxLines="1"
         android:padding="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addPharmacyWorkTime" />
+        app:layout_constraintTop_toBottomOf="@+id/adressPharmacyText" />
+
+    <TextView
+        android:id="@+id/numberPharmacyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="8dp"
+        android:text="Введите контактный номер"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/addPharmacyAdress"
+        app:layout_constraintTop_toBottomOf="@+id/addPharmacyAdress" />
 
     <EditText
         android:id="@+id/addPharmacyContactInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/border"
         android:fontFamily="@font/nunito_regular"
-        android:hint="Введите контактный номер"
+        android:hint="Контактный номер"
+        android:textColor="@color/black"
         android:maxLines="1"
         android:padding="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addPharmacyAdress" />
+        app:layout_constraintTop_toBottomOf="@+id/numberPharmacyText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

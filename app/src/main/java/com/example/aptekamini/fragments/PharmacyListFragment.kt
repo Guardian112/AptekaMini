@@ -13,6 +13,7 @@ import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.aptekamini.MainActivity
@@ -43,6 +44,10 @@ class PharmacyListFragment: Fragment(R.layout.fragment_pharmacy_list), SearchVie
         menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
         pharmacyViewModel = (activity as MainActivity).pharmacyViewModel
+
+        binding.addPharmacyBut.setOnClickListener(){
+            it.findNavController().navigate(R.id.action_pharmacyListFragment_to_addPharmacyFragment)
+        }
         setupPharmacyRecyclerView()
 
         goToMain.setOnClickListener {

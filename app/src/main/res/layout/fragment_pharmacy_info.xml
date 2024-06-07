@@ -21,75 +21,77 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/pharmacyInfoName"
+    <EditText
+        android:id="@+id/editPharmacyInfoName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="10dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
+        android:maxLines="1"
+        android:padding="8dp"
         android:text="Название аптеки"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:padding="8dp"
-        android:background="@drawable/border"
-        android:fontFamily="@font/nunito_regular"
-        app:layout_constraintEnd_toStartOf="@+id/pharmacyInfoWorkTime"
+        app:layout_constraintEnd_toStartOf="@+id/editPharmacyInfoWorkTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editPharmacyView"
         tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/pharmacyInfoWorkTime"
+    <EditText
+        android:id="@+id/editPharmacyInfoWorkTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
+        android:maxLines="1"
+        android:padding="8dp"
         android:text="Время работы"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:padding="8dp"
-        android:background="@drawable/border"
-        android:fontFamily="@font/nunito_regular"
-        app:layout_constraintBottom_toBottomOf="@+id/pharmacyInfoName"
+        app:layout_constraintBottom_toBottomOf="@+id/editPharmacyInfoName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pharmacyInfoName"
-        app:layout_constraintTop_toTopOf="@+id/pharmacyInfoName"
+        app:layout_constraintStart_toEndOf="@+id/editPharmacyInfoName"
+        app:layout_constraintTop_toTopOf="@+id/editPharmacyInfoName"
         tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/pharmacyInfoAdress"
+    <EditText
+        android:id="@+id/editPharmacyInfoAdress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
+        android:padding="8dp"
         android:text="Адрес"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:padding="8dp"
-        android:background="@drawable/border"
-        android:fontFamily="@font/nunito_regular"
-        app:layout_constraintEnd_toStartOf="@+id/pharmacyInfoNumber"
-        app:layout_constraintStart_toStartOf="@+id/pharmacyInfoName"
-        app:layout_constraintTop_toBottomOf="@+id/pharmacyInfoName"
+        app:layout_constraintEnd_toEndOf="@+id/editPharmacyInfoName"
+        app:layout_constraintStart_toStartOf="@+id/editPharmacyInfoName"
+        app:layout_constraintTop_toBottomOf="@+id/editPharmacyInfoName"
         tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/pharmacyInfoNumber"
+    <EditText
+        android:id="@+id/editPharmacyInfoNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/nunito_regular"
+        android:maxLines="1"
+        android:padding="8dp"
         android:text="Номер телефона"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:padding="8dp"
-        android:background="@drawable/border"
-        android:fontFamily="@font/nunito_regular"
-        app:layout_constraintBottom_toBottomOf="@+id/pharmacyInfoAdress"
+        app:layout_constraintBottom_toBottomOf="@+id/editPharmacyInfoAdress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pharmacyInfoAdress"
-        app:layout_constraintTop_toTopOf="@+id/pharmacyInfoAdress"
+        app:layout_constraintStart_toEndOf="@+id/editPharmacyInfoAdress"
+        app:layout_constraintTop_toTopOf="@+id/editPharmacyInfoAdress"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -104,7 +106,7 @@
         android:fontFamily="@font/nunito_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pharmacyInfoAdress"
+        app:layout_constraintTop_toBottomOf="@+id/editPharmacyInfoAdress"
         tools:ignore="HardcodedText" />
 
     <androidx.recyclerview.widget.RecyclerView

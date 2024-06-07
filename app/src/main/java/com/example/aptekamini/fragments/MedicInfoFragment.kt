@@ -3,6 +3,9 @@ package com.example.aptekamini.fragments
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
@@ -71,7 +74,27 @@ class MedicInfoFragment : Fragment(R.layout.fragment_medic_info), MenuProvider {
                 Toast.makeText(context, "Лекарство удалено", Toast.LENGTH_SHORT).show()
                 view?.findNavController()?.popBackStack(R.id.medicListFragment, false)
             }
-            setNegativeButton("Отменить", null)
+            setNegativeButton("Отмена", null)
+        }.create().show()
+    }
+
+    override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+        menu.clear()
+        menuInflater.inflate(R.menu.delete_menu, menu)
+    }
+
+    override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+        return when(menuItem.itemId) {
+            R.id.deleteMenu -> {
+                deleteMedic()
+                true
+            }
+            else -> false
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        medicBinding = null
     }
 }
