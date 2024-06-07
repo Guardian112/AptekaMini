@@ -12,100 +12,67 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
+        android:padding="8dp"
         android:text="Добавление нового лекарства"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:padding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nameMedicText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:padding="8dp"
-        android:text="Введите название лекарства"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/addMedicText"
-        app:layout_constraintTop_toBottomOf="@+id/addMedicText" />
 
     <EditText
         android:id="@+id/addMedicName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
-        android:maxLines="1"
-        android:padding="8dp"
-        android:textSize="18sp"
         android:background="@drawable/border"
         android:fontFamily="@font/nunito_regular"
-        android:hint="Название"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameMedicText" />
-
-    <TextView
-        android:id="@+id/dosageMedicText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:hint="Введите название"
+        android:maxLines="1"
         android:padding="8dp"
-        android:text="Введите дозировку"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/addMedicName"
-        app:layout_constraintTop_toBottomOf="@+id/addMedicName" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMedicText" />
 
     <EditText
         android:id="@+id/addMedicDosage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
-        android:maxLines="1"
-        android:padding="8dp"
-        android:textSize="18sp"
         android:background="@drawable/border"
         android:fontFamily="@font/nunito_regular"
-        android:hint="Дозировка"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dosageMedicText" />
-
-    <TextView
-        android:id="@+id/descriprionMedicText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:hint="Введите дозировку"
+        android:maxLines="1"
         android:padding="8dp"
-        android:text="Введите описание лекарства"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/addMedicDosage"
-        app:layout_constraintTop_toBottomOf="@+id/addMedicDosage" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMedicName" />
 
     <EditText
         android:id="@+id/addMedicDescription"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
-        android:gravity="top"
-        android:padding="8dp"
-        android:hint="Описание"
-        android:textSize="18sp"
-        android:textColor="@color/black"
         android:background="@drawable/border"
         android:fontFamily="@font/nunito_regular"
+        android:gravity="top"
+        android:hint="Введите описание лекарства"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriprionMedicText" />
+        app:layout_constraintTop_toBottomOf="@+id/addMedicDosage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
