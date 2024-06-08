@@ -39,12 +39,12 @@
 
     <ImageView
         android:id="@+id/menuBack"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
         android:importantForAccessibility="no"
         android:src="@drawable/menuback"
-        app:layout_constraintBottom_toTopOf="@+id/pharmacyList"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,6 +79,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goToMain" />
+        app:layout_constraintTop_toBottomOf="@+id/menuBack" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
